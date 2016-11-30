@@ -40,7 +40,7 @@ describe 'CashRegister' do
 
   describe '#apply_discount' do
     context 'the cash register was initialized with an employee discount' do
-      it 'applies the discount to the total price' do
+      it 'applies the discount to the total price' do cash_register_with_discount.total=(0)
         cash_register_with_discount.add_item("macbook air", 1000)
         cash_register_with_discount.apply_discount
         expect(cash_register_with_discount.total).to eq(800)
